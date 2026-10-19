@@ -1,6 +1,16 @@
+# Dépendances et fichiers générés
 node_modules/
 dist/
 .astro/
+
+# Variables d'environnement et secrets
 .env
 .env.*
 !.env.example
+secrets.toml
+.streamlit/secrets.toml
+
+# Fichiers locaux et systèmes
+.DS_Store
+Thumbs.db
+*.log
