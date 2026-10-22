@@ -247,27 +247,40 @@ const projects = [
                 </ul>
 
                 {project.featured && (
-                  <div class="project-action" id="algolab-deployment">
-                    {algolabDeploymentUrl ? (
-                      <a
-                        class="button button-primary project-cta"
-                        href={algolabDeploymentUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Découvrir AlgoLab <span aria-hidden="true">↗</span>
-                      </a>
-                    ) : (
-                      <button class="button button-primary project-cta" type="button" disabled>
-                        Découvrir AlgoLab
-                      </button>
-                    )}
-                    <p class="deployment-note">
-                      {algolabDeploymentUrl
-                        ? "Application AlgoLab ouverte dans un nouvel onglet."
-                        : "AlgoLab n’est pas encore accessible en ligne. Configurez PUBLIC_ALGOLAB_URL avec l’URL de déploiement pour activer ce bouton."}
-                    </p>
-                  </div>
+                  
+                <div class="project-action" id="algolab-deployment">
+                  {algolabDeploymentUrl ? (
+                    <a
+                      class="button button-primary project-cta"
+                      href={algolabDeploymentUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Découvrir AlgoLab <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : (
+                    <button class="button button-primary project-cta" type="button" disabled>
+                      Découvrir AlgoLab
+                    </button>
+                  )}
+
+                  <a
+                    class="text-link project-source-link"
+                    href="https://github.com/projectgather/algo-lab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Consulter le code source d'AlgoLab sur GitHub (nouvel onglet)"
+                  >
+                    Voir le code source <span aria-hidden="true">↗</span>
+                  </a>
+
+                  <p class="deployment-note">
+                    {algolabDeploymentUrl
+                      ? "Application AlgoLab ouverte dans un nouvel onglet."
+                      : "AlgoLab n’est pas encore accessible en ligne. Configurez PUBLIC_ALGOLAB_URL avec l’URL de déploiement pour activer ce bouton."}
+                  </p>
+                </div>
+
                 )}
               </div>
 
